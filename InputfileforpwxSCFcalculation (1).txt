@@ -1,0 +1,44 @@
+&control
+prefix='qe'
+title='Benzeno'
+pseudo_dir='/apps/dftqe/r113/data/atoms_pbe'
+outdir='/var/ion/data/sessions/2641291/dftqe2565'
+tstress = .true.,
+tprnfor = .true.,
+calculation='relax'
+
+/
+&system
+ibrav= 8,celldm(1)= 18.89725989,celldm(2) = 0.5,celldm(3) = 0.33,nat= 12, ntyp= 2,ecutwfc= 60,ecutrho= 360,nbnd=20,occupations='tetrahedra',
+degauss=0,
+
+/
+&electrons
+electron_maxstep= ,
+conv_thr=1E-6,
+mixing_mode= 'plain',
+mixing_beta= 0.7,
+
+/
+&ions
+ion_dynamics= 'bfgs',
+
+/
+ATOMIC_SPECIES
+C 28.086 C.UPF
+H 28.086 H.UPF
+ATOMIC_POSITIONS angstrom
+C -4.460019861 1.184794043 0.000000000
+C -3.068577805 1.261072426 0.000000000
+C -2.306807662 0.093639345 0.000000000
+C -2.936616961 -1.149108769 0.000000000
+C -4.328104412 -1.225541428 0.000000000
+C -5.089862121 -0.058108576 0.000000000
+H -1.218662089 0.153277758 0.000000000
+H -2.575604573 2.232862584 0.000000000
+H -5.055611884 2.097663349 0.000000000
+H -2.341295512 -2.062134138 0.000000000
+H -4.821091200 -2.197334806 0.000000000
+H -6.178055920 -0.117627788 0.000000000
+K_POINTS automatic
+1 1 1 0 0 0
